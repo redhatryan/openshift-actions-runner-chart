@@ -1,11 +1,5 @@
 # OpenShift GitHub Actions Runner Chart 
 
-[![Helm Lint](https://github.com/redhatryan/openshift-actions-runner-chart/workflows/Helm%20Lint/badge.svg)](https://github.com/redhatryan/openshift-actions-runner-chart/actions)
-[![Link checker](https://github.com/redhatryan/openshift-actions-runner-chart/workflows/Link%20checker/badge.svg)](https://github.com/redhatryan/openshift-actions-runner-chart/actions)
-[![Publish chart to Pages](https://github.com/redhatryan/openshift-actions-runner-chart/workflows/Publish%20chart%20to%20Pages/badge.svg)](https://github.com/redhatryan/openshift-actions-runner-chart/actions)
-
-[![Tag](https://img.shields.io/github/v/tag/redharyan/openshift-actions-runner-chart)](https://github.com/redhatryan/openshift-actions-runner-chart/tags)
-[![Quay org](https://img.shields.io/badge/quay-redhat--github--actions-red)](https://quay.io/organization/redhat-github-actions)
 
 This repository contains a Helm chart for deploying one or more self-hosted <!-- markdown-link-check-disable --> [GitHub Actions Runners]((https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners)) <!-- markdown-link-check-enable -->
 into a Kubernetes cluster. By default, the container image used is the [**OpenShift Actions Runner**](https://github.com/redhatryan/openshift-actions-runner).
