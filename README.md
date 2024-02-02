@@ -41,7 +41,7 @@ You can install runners into your cluster using the Helm chart in this repositor
 3. Add this repository as a Helm repository.
 ```bash
 helm repo add openshift-actions-runner \
-    https://redhat-actions.github.io/openshift-actions-runner-chart \
+    https://redhatryan.github.io/openshift-actions-runner-chart \
 && helm repo update
 ```
 You can also clone this repository and reference the chart's directory. This allows you to modify the chart if necessary.
