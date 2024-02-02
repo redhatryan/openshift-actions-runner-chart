@@ -50,14 +50,12 @@ You can also clone this repository and reference the chart's directory. This all
     - Add the `--namespace` argument to all `helm` and `kubectl/oc` commands if you want to use a namespace other than your current context's namespace.
 
 ```bash
-# Authorization from Step 2:
-# Either GITHUB_PAT, OR all 3 of GITHUB_APP_*
+
 export GITHUB_PAT=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
 
-# For an org runner, this is the org.
 # For a repo runner, this is the repo owner (org or user).
 export GITHUB_OWNER=redhatryan
-# For an org runner, omit this argument.
+
 # For a repo runner, the repo name.
 export GITHUB_REPO=openshift-actions-runner-chart
 # Helm release name to use.
