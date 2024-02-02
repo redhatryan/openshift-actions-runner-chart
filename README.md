@@ -57,7 +57,7 @@ export GITHUB_PAT=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
 export GITHUB_OWNER=redhatryan
 
 # For a repo runner, the repo name.
-export GITHUB_REPO=openshift-actions-runner-chart
+export GITHUB_REPO=https://github.com/redhatryan/openshift-actions-runner-chart
 # Helm release name to use.
 export RELEASE_NAME=actions-runner
 
