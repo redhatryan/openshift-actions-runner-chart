@@ -65,7 +65,7 @@ export RELEASE_NAME=actions-runner
 # replace openshift-actions-runner/actions-runner below with the directory containing Chart.yaml.
 
 # Installing using PAT Auth
-helm install $RELEASE_NAME openshift-actions-runner/actions-runner \
+helm install $RELEASE_NAME openshift-actions-runners/actions-runner \
     --set-string githubPat=$GITHUB_PAT \
     --set-string githubOwner=$GITHUB_OWNER \
     --set-string githubRepository=$GITHUB_REPO \
