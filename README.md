@@ -1,8 +1,7 @@
 # OpenShift GitHub Actions Runner Chart 
 
-
 This repository contains a Helm chart for deploying one or more self-hosted <!-- markdown-link-check-disable --> [GitHub Actions Runners]((https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners)) <!-- markdown-link-check-enable -->
-into a Kubernetes cluster. By default, the container image used is the [**OpenShift Actions Runner**](https://github.com/redhatryan/openshift-actions-runner).
+into a Kubernetes cluster. By default, the container image used is the [**OpenShift Actions Runner**](https://github.com/redhatryan/openshift-actions-runners).
 
 You can deploy runners automatically in an Actions workflow using the [**OpenShift Actions Runner Installer**](https://github.com/redhatryan/openshift-actions-runner-installer).
 
@@ -53,15 +52,11 @@ You can also clone this repository and reference the chart's directory. This all
 ```bash
 # Authorization from Step 2:
 # Either GITHUB_PAT, OR all 3 of GITHUB_APP_*
-export GITHUB_PAT=c0ffeeface1234567890
-# OR, GitHub App information:
-export GITHUB_APP_ID=123456
-export GITHUB_APP_INSTALL_ID=7890123
-export GITHUB_APP_PEM='----------BEGIN RSA PRIVATE KEY...'
+export GITHUB_PAT=<token>
 
 # For an org runner, this is the org.
 # For a repo runner, this is the repo owner (org or user).
-export GITHUB_OWNER=redhat-actions
+export GITHUB_OWNER=redhatryan
 # For an org runner, omit this argument.
 # For a repo runner, the repo name.
 export GITHUB_REPO=openshift-actions-runner-chart
@@ -74,16 +69,6 @@ export RELEASE_NAME=actions-runner
 # Installing using PAT Auth
 helm install $RELEASE_NAME openshift-actions-runner/actions-runner \
     --set-string githubPat=$GITHUB_PAT \
-    --set-string githubOwner=$GITHUB_OWNER \
-    --set-string githubRepository=$GITHUB_REPO \
-&& echo "---------------------------------------" \
-&& helm get manifest $RELEASE_NAME | kubectl get -f -
-
-# OR, Installing using App Auth
-helm install $RELEASE_NAME openshift-actions-runner/actions-runner \
-    --set-string githubAppId=$GITHUB_APP_ID \
-    --set-string githubAppInstallId=$GITHUB_APP_INSTALL_ID \
-    --set-string githubAppPem="$GITHUB_APP_PEM" \
     --set-string githubOwner=$GITHUB_OWNER \
     --set-string githubRepository=$GITHUB_REPO \
 && echo "---------------------------------------" \
